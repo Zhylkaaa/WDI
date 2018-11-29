@@ -26,8 +26,8 @@ bool isPrim(int l, int r){
 bool check(int l, int r){
 	if(l>r)return false;
 	if(l==r)return true;
-	for(int i = l+1;i<=l+30 && i<r;i++){
-		if(isPrim(l,l+i) && check(l+i, r))return true;
+	for(int i = l+1;i<=l+30 && i<=r;i++){
+		if(isPrim(l,i) && check(i, r))return true;
 	}
 
 	return false;
