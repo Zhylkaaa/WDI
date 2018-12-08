@@ -15,13 +15,11 @@ bool check(int row, int col){
 	P[row][col]=c;
 	if(c==25)return true;
 
-	for(int i = 1;i<=2;i++){
-		for(int j=2;j>=1;j--){
-			if(i==1 && j==1)continue;
-			if(check(row+i, col+j) ||
-				check(row+i, col-j) ||
-				check(row-i, col+j) ||
-				check(row-i, col-j)) return true;
+	for(int i = -2;i<=2;i++){
+		if(i==0)continue;
+		for(int j=2;j>=-2;j--){
+			if((abs(i)==1 && abs(j)==1) || (abs(i)==abs(j)) || j == 0)continue;
+			if(check(row+i, col+j)) return true;
 		}
 	}
 

@@ -10,7 +10,7 @@ int A[8][8];
 ll best = INF;
 ll c = 0;
 
-void check(int T[8][8], int row, int col){
+void check(int T[][8], int row, int col){
 	if(row>7 || col<0 || col>7 || best<c)return;
 	c+=T[row][col];
 	if(row==7){
