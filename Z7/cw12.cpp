@@ -13,8 +13,7 @@ void podzial(int n, int p, string s){
 	}
 	else {
 		for(int i = p;i<n;i++){
-			char c = '0' + i;
-			podzial(n-i,i,s+" + "+c);
+			podzial(n-i,i,s+" + "+to_string(i));
 		}
 	}
 }
